@@ -27,7 +27,7 @@ module.exports = {
       patterns: [
         {
           from: "src/**/*.css",
-          to: "styles/[name].[ext]",
+          to: "styles/[name][ext]",
         },
         {
           from: "public",
