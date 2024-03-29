@@ -5,7 +5,7 @@ module.exports = {
   entry: './src/index.js', // Arquivo de entrada principal
   output: {
     path: path.resolve(__dirname, 'dist'), // Diretório de saída para os arquivos buildados
-    filename: 'index.js' // Nome do arquivo JavaScript buildado
+    filename: 'bundle.js' // Nome do arquivo JavaScript buildado
   },
   module: {
     rules: [
@@ -15,7 +15,9 @@ module.exports = {
       },
       {
         test: /\.html$/, // Regra para arquivos HTML
-        use: ['html-loader'] // Carrega os arquivos HTML
+        use: [
+          path.resolve(__dirname, './html-loader.js'), // Caminho para o seu carregador
+        ]
       }
     ]
   },
