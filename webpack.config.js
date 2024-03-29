@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js', // Arquivo de entrada principal
@@ -9,10 +10,6 @@ module.exports = {
   },
   module: {
     rules: [
-      {
-        test: /\.css$/, // Regra para arquivos CSS
-        use: ['style-loader', 'css-loader'] // Carrega os estilos CSS
-      },
       {
         test: /\.html$/, // Regra para arquivos HTML
         use: [
@@ -25,6 +22,11 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html', // Arquivo HTML de origem
       filename: 'index.html' // Nome do arquivo HTML buildado
-    })
+    }),
+    new CopyPlugin({
+      patterns: [
+        { from: 'src/styles.css', to: 'styles.css' }, // ajuste o caminho de origem e destino conforme necessário
+      ],
+    }),
   ]
 };
