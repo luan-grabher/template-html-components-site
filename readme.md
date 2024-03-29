@@ -1,5 +1,7 @@
 # HTML Components Site
 
+YES, the HTML Componentization exists without the need for a framework.
+
 This is a simple project to build a site with HTML components.
 
 * Fast and easy to use.
