@@ -31,6 +31,12 @@ module.exports = {
             return path.basename(absoluteFilename);
           },
         },
+        {
+          from: "public/*",
+          to: ({ context, absoluteFilename }) => {
+            return path.basename(absoluteFilename);
+          },
+        }
       ],
     }),
   ],
