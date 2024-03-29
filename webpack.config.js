@@ -26,17 +26,13 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         {
-          from: "src/*.css",
-          to: ({ context, absoluteFilename }) => {
-            return path.basename(absoluteFilename);
-          },
+          from: "src/**/*.css",
+          to: "styles/[name].[ext]",
         },
         {
-          from: "public/*",
-          to: ({ context, absoluteFilename }) => {
-            return path.basename(absoluteFilename);
-          },
-        }
+          from: "public",
+          to: "",
+        },
       ],
     }),
   ],

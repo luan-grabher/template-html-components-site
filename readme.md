@@ -33,10 +33,12 @@ npm run build
 
 ## CSS
 
-You can add CSS by creating a '.css' file and importing it in the HTML file.
+You can add CSS by creating a '.css' file and importing it in the HTML file as 'styles/YOUR_CSS_FILE_NAME.css'.
+
+Example import for 'components/button/button.css' inside the 'components/button/button.html':
 
 ```html
-<link rel="stylesheet" href="path/to/css/file.css">
+<link rel="stylesheet" href="styles/button.css">
 ```
 
 ## JavaScript
